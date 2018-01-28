@@ -16,4 +16,9 @@ class ItemGroup(models.Model):
     def __str__(self):
         return self.name
 
+class Offer(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.CharField(max_length=1000)
+    sub_items = models.ManyToManyField(Item, blank=True)
+    sub_item_groups = models.ManyToManyField(ItemGroup, blank=True)
 
