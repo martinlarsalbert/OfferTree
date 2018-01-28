@@ -1,0 +1,12 @@
+
+OfferTree/secret_settings.py
+
+*.sqlite3
+
+.idea/workspace.xml
+
+.idea/OfferTree.iml
+
+.idea/modules.xml
+
+.idea/misc.xml
