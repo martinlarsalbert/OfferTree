@@ -10,8 +10,8 @@ class Item(models.Model):
 class ItemGroup(models.Model):
     name = models.CharField(max_length=30)
 
-    sub_groups = models.ManyToManyField("self")
-    sub_items = models.ManyToManyField(Item)
+    sub_groups = models.ManyToManyField("self",blank = True)
+    sub_items = models.ManyToManyField(Item,blank = True)
 
     def __str__(self):
         return self.name

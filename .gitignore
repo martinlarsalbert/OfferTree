@@ -18,3 +18,5 @@ OfferTree/secret_settings.py
 offer_generator/migrations/0001_initial.py
 
 offer_generator/migrations/0002_auto_20180128_1912.py
+
+offer_generator/migrations/0003_auto_20180128_1927.py
