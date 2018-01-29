@@ -22,3 +22,5 @@ class Offer(models.Model):
     sub_items = models.ManyToManyField(Item, blank=True)
     sub_item_groups = models.ManyToManyField(ItemGroup, blank=True)
 
+    def __str__(self):
+        return self.name
