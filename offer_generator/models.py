@@ -16,6 +16,18 @@ class ItemGroup(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def price(self):
+
+        price = 0
+        for sub_item in self.sub_items.all():
+            price+=sub_item.price
+
+        for sub_group in self.sub_groups.all():
+            price += sub_group.price
+
+        return price
+
 class Offer(models.Model):
     name = models.CharField(max_length=30)
     description = models.CharField(max_length=1000)
@@ -24,3 +36,15 @@ class Offer(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def price(self):
+
+        price = 0
+        for sub_item in self.sub_items.all():
+            price+=sub_item.price
+
+        for sub_group in self.sub_item_groups.all():
+            price += sub_group.price
+
+        return price
